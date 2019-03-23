@@ -4,24 +4,20 @@ function domainGenerator() {
     let adj = ['great', 'big', 'high', 'good', 'new', 'special', 'strong', 'easy', 'better', 'sure', 'full'];
     let noun = ['jogger','racoon', 'money', 'book', 'eye', 'family', 'group', 'school', 'work', 'system'];
 
+
     
-    
-    for(let i = 0; i <= 10; i++) {
+    for(let i = 0; i < pronoun.length; i++){
         
-        let one = pronoun[Math.round(Math.random()*(pronoun.length-1))];
-        let two = adj[Math.round(Math.random()*(adj.length-1))];
-        let three = noun[Math.round(Math.random()*(noun.length-1))];
-
-        let str = one + two + three +'.com ',
-
-        elmDiv = document.createElement('div');
-         
-        elmDiv.innerHTML = str;
+        for(let j = 0; j < adj.length; j++){
             
-        let newDiv = document.getElementsByTagName('div')[0];
-        newDiv.appendChild(elmDiv);
-  
-  
+            for(let z = 0; z < noun.length; z++){
+                
+                let src = pronoun[i]+adj[j]+noun[z]+".com";
+                 document.write(src +'<br />')
+                
+
+            }
+        }
     }
 
 }
